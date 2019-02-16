@@ -1,18 +1,18 @@
-import http.client
+from flask import Flask
 
-conn = http.client.HTTPConnection("api,wegmans,io")
+from google.cloud import language
+from google.cloud.language import enums
+from google.cloud.language import types
+app = Flask(__name__)
 
-payload = ""
+@app.route("/")
+def main():
+    return "<h1>WegBuddy</h1>"
 
-headers = {
-    'cache-control': "no-cache",
-    'Postman-Token': "eed96f4c-9c5b-4857-b1fb-30949ed241a7",
-    'Subscription-Key': "510bfc0b0c0a487fba05de17c35d7954"
-    }
+@app.route("/test")
+def test():
+    return "test message"
 
-conn.request("GET", "meals,recipes", payload, headers)
+if __name__ == '__main__':
+    app.run(host = "0.0.0.0", port = 4428, debug=True)
 
-res = conn.getresponse()
-data = res.read()
-
-print(data.decode("utf-8"))
