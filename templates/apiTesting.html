@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+    <script>
+        $( document ).ready(function() {
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://api.wegmans.io/meals/recipes?api-version=2018-10-18&Subscription-Key=510bfc0b0c0a487fba05de17c35d7954%0A",
+                "method": "GET",
+                "headers": {
+                    "cache-control": "no-cache",
+                    "Postman-Token": "39e8e887-b803-4a1d-8f5d-ea1b0f1ec852",
+                    "Subscription-Key": "510bfc0b0c0a487fba05de17c35d7954"
+                }
+                }
+                
+                $.ajax(settings).done(function (response) {
+                console.log(response);
+                });
+        });
+        
+    </script>
+</head>
+</html>
