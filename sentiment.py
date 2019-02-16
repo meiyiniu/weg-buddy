@@ -4,7 +4,8 @@ from google.cloud.language import types
 from google.oauth2 import service_account
 
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/Users/Reid/PycharmProjects/weg-buddy/account.json"
+# THIS LINE IS NEEDED IF YOUR SYSTEM ENVIRONMENT VARIABLE DOES NOT WORK
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/Users/Reid/PycharmProjects/weg-buddy/account.json"
 
 def analyzeText(input) -> int:
     credentials = service_account.Credentials.from_service_account_file(
