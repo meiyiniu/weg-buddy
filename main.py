@@ -33,9 +33,9 @@ def get_user_response():
     print("rendering response\n")
     input = request.args.get('text')
     print("outputting")
-    out = queryAPIForRecipe(sentiment.getIDs(sentiment.analyzeText(input), 0))
+    out = queryAPIForRecipe(sentiment.getIDs(sentiment.analyzeText(input), 0)).split(" - ")
 
-    return render_template("recipes.html", data=out)
+    return render_template("recipes.html", data=out[0], img=out[1])
 
 
 
