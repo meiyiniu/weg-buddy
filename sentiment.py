@@ -54,6 +54,62 @@ def analyzeText(input) -> str:
     return str(sentiment.score)
     #return client.analyze_sentiment(input)
 
+def getIDs(sentiment_score, i) -> str:
+    if sentiment_score < -0.8:
+        if i == 0:
+            return ("9082")
+        elif i == 1:
+            return ("21597")
+    elif -0.8 <= sentiment_score < -0.6:
+        if i == 0:
+            return ("215390")
+        elif i == 1:
+            return ("21597")
+    elif -0.6 <= sentiment_score <  -0.4:
+        if i == 0:
+            return ("18670")
+        elif i == 1:
+            return ("215390")
+    elif -0.4 <= sentiment_score < -0.2:
+        if i == 0:
+            return ("10782")
+        elif i == 1:
+            return ("18670")
+    elif -0.2 <= sentiment_score < 0:
+        if i == 0:
+            return ("12346")
+        elif i == 1:
+            return ("10782")
+    elif 0 <= sentiment_score < 0.2:
+        if i == 0:
+            return ("8463")
+        elif i == 1:
+            return ("12346")
+    elif 0.2 <= sentiment_score < 0.4:
+        if i == 0:
+            return ("8100")
+        elif i == 1:
+            return ("8463")
+    elif 0.4 <= sentiment_score < 0.6:
+        if i == 0:
+            return ("14872")
+        elif i == 1:
+            return ("8100")
+    elif 0.6 <= sentiment_score < 0.8:
+        if i == 0:
+            return ("19494")
+        elif i == 1:
+            return ("14872")
+    else:
+        if i == 0:
+            return ("22379")
+        elif i == 1:
+            return ("19494")
+
+
+
+
+
 print("\nTest 1" + str(analyzeText("I am so sad")))
 print("\nTest 2" + str(analyzeText("I am so happy")))
 print("\nTest 3" + str(analyzeText("I am angry")))
