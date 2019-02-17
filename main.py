@@ -1,14 +1,18 @@
 from flask import Flask, request, render_template
+import sentiment
 app = Flask(__name__)
 
 @app.route("/")
 def main():
+    print("rendering home\n")
     return render_template("index.html")
 
 # Gets text from the webpage's textbox
-@app.route('/', methods=['INPUT'])
+@app.route('/sentiment')
 def get_user_response():
-    return request.form['text']
+    print("rendering response\n")
+    input = request.args.get('text')
+    return sentiment.analyzeText(input)
 
 
 
