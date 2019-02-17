@@ -30,6 +30,3 @@ def queryAPIForRecipe(ID) -> str:
     return toReturn
 
 #def getProduct(ID):
-
-
-queryAPIForRecipe(20402)

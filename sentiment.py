@@ -55,6 +55,7 @@ def analyzeText(input) -> str:
     #return client.analyze_sentiment(input)
 
 def getIDs(sentiment_score, i) -> str:
+    sentiment_score = float(sentiment_score)
     if sentiment_score < -0.8:
         if i == 0:
             return ("9082")
