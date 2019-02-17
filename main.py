@@ -10,6 +10,8 @@ def main():
 def get_user_response():
     return request.form['text']
 
+
+
 @app.route('/wegmans')
 def wegmans():
     return render_template("apiTesting.html")
