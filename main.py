@@ -1,5 +1,8 @@
 from flask import Flask, request, render_template
+
 import sentiment
+
+#import sentiment
 app = Flask(__name__)
 
 @app.route("/")
@@ -13,7 +16,6 @@ def get_user_response():
     print("rendering response\n")
     input = request.args.get('text')
     return sentiment.analyzeText(input)
-
 
 
 @app.route('/wegmans')
