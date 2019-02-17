@@ -63,14 +63,14 @@ def getIDs(sentiment_score, i) -> str:
             return ("21597")
     elif -0.8 <= sentiment_score < -0.6:
         if i == 0:
-            return ("215390")
+            return ("21539")
         elif i == 1:
             return ("21597")
     elif -0.6 <= sentiment_score <  -0.4:
         if i == 0:
             return ("18670")
         elif i == 1:
-            return ("215390")
+            return ("21539")
     elif -0.4 <= sentiment_score < -0.2:
         if i == 0:
             return ("10782")
@@ -104,13 +104,14 @@ def getIDs(sentiment_score, i) -> str:
     else:
         if i == 0:
             return ("22379")
-        elif i == 1:
+        else:
             return ("19494")
 
 
 
 
 
-print("\nTest 1" + str(analyzeText("I am so sad")))
+
+print("\nTest 1" + str(analyzeText("i am feeling not so good")))
 print("\nTest 2" + str(analyzeText("I am so happy")))
 print("\nTest 3" + str(analyzeText("I am angry")))
