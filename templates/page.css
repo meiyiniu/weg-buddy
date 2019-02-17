@@ -24,7 +24,7 @@ body {
 
 .box h1 {
     text-align: center;
-    color: #ff0000;
+    color: #12d422e5;
     font-size: 40px;
     font-weight: bold;
     margin-top: 0px;
@@ -39,7 +39,7 @@ body {
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     border-radius: 25px;
-    background-color: #ff0000;
+    background-color: #12d422e5;
     width: 47%;
     height: 33%;
     padding: 10px;
@@ -49,12 +49,12 @@ body {
 }
 
 #textbox {
-    border: 2px solid #ff0000;
+    border: 2px solid #12d422e5;
     background-color: #ffffff;
 	border-radius: 10px;
 	height: 21px;
-	width: 182px;
+    width: 182px;
+    margin: 0 auto;
 	text-align: center;
-    margin-left: 225px;
     padding-left: 3px;
 }
