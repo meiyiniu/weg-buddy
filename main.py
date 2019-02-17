@@ -1,14 +1,9 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
-
-
-
 @app.route("/")
 def main():
-    #return render_template("page.html")
-    return render_template("apiTesting.html")
-
+    return render_template("page.html")
 
 # Gets text from the webpage's textbox
 @app.route('/', methods=['INPUT'])
