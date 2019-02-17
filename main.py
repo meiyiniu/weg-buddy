@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+#import sentiment
 app = Flask(__name__)
 
 @app.route("/")
@@ -8,8 +9,9 @@ def main():
 # Gets text from the webpage's textbox
 @app.route('/', methods=['INPUT'])
 def get_user_response():
-    return request.form['text']
-
+    # userMood = request.form
+    # return sentiment.analyzeText(userMood)
+    return request.form(['text'])
 
 
 @app.route('/wegmans')
