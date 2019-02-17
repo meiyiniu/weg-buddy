@@ -23,7 +23,7 @@ def queryAPIForRecipe(ID) -> str:
     r = requests.get(get_url, headers=headers)
     rd = json.loads(r.text)
 
-    toReturn = str(rd['name']) + " - " + str(rd['_links'][2]['href']).replace("[", "").replace("]", "")
+    toReturn = str(rd['name']) + " - " + str(rd['_links'][2]['href']).replace("[", "").replace("]", "") + " - " + str(rd['preparationTime']['min'])
 
     return toReturn
 
@@ -35,7 +35,7 @@ def get_user_response():
     print("outputting")
     out = queryAPIForRecipe(sentiment.getIDs(sentiment.analyzeText(input), 0)).split(" - ")
 
-    return render_template("recipes.html", data=out[0], img=out[1])
+    return render_template("recipes.html", data=out[0], img=out[1], time=out[2])
 
 
 
