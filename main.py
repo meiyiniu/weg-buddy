@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return render_template("page.html")
+    return render_template("index.html")
 
 # Gets text from the webpage's textbox
 @app.route('/', methods=['INPUT'])
