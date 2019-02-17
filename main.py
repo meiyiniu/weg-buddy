@@ -2,7 +2,6 @@ from flask import Flask, request, render_template
 
 import sentiment
 
-#import sentiment
 app = Flask(__name__)
 
 @app.route("/")
