@@ -5,7 +5,7 @@ import sentiment, wegmans
 import requests
 import json
 
-key = "1472762928494a6da6b27184b02a6af8";
+key = (insert wegmans subscipriton key);
 app = Flask(__name__)
 
 @app.route("/")
