@@ -1,7 +1,7 @@
 import requests
 import json
 
-key = "1472762928494a6da6b27184b02a6af8";
+key = "";
 
 def queryAPIForProduct(ID):
     get_url = 'https://api.wegmans.io/products/{sku}?api-version=2018-10-18'
